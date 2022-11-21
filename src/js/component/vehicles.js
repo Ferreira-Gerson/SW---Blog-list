@@ -18,14 +18,13 @@ export const Vehicles = () => {
     const listVehicle = vehicle?.results?.map((item, index) => {
     return (
 
-	<div className="card" key={index} style={{width: "22rem", height: "24rem"}}>
+	<div className="card" key={index} style={{width: "18rem", height: "auto"}}>
         <img src="..." className="card-img-top" alt="..."/>
         <div className="card-body text-start">
             <h5 className="card-title">Name: {item.name}</h5>
             <p>model: {item.model}</p>
             <p>crew: {item.crew}</p>
             <p>passengers: {item.passengers}</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <button href="#" className="btn btn-primary">more infor</button>
             <button href="#" className="btn"><i className="fa-regular fa-heart"></i></button>
         </div>

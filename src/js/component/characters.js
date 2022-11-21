@@ -22,16 +22,15 @@ export const Characters = () => {
 
         return (
     
-                <div className="card " key={index} style={{width: "18rem", height: "22rem"}}>
+                <div className="card" key={index} style={{width: "18rem", height: "auto"}}>
                     <img src="..." className="card-img-top" alt="..."/>
                     <div className="text-start card-body" >
                         <h5 className="card-title">{item.name}</h5>  
-                        <p>Height: {item.height}</p>
-                        <p>Mass: {item.mass}</p>
                         <p>Gender: {item.gender}</p>
-                        <p className="card-text" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p>Eye Color: {item.eye_color}</p>
+                        <p>Hair Color: {item.hair_color}</p>
                         <button href={item.url} className="btn btn-primary">more infor</button>
-                        <button href="#" className="btn "><i className="fa-regular fa-heart toggle" /></button>
+                        <a href="#" className="btn outButton float-end "><i className="fa-regular fa-heart toggle " /></a>
                     </div>
                 </div>
                 

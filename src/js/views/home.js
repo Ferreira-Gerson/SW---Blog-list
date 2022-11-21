@@ -7,12 +7,18 @@ import { Planets } from "../component/planets";
 export const Home = () => (
 	<div className="container-fluid">
 		<div className="container">
-			<h2>People</h2>
-			<Characters />
-			<h2>Planets</h2>
+			<h2 className="text-danger">People</h2>
+			<div className="row scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-scroll">
+				<Characters />
+			</div>
+			<h2 className="text-danger">Planets</h2>
+			<div className="row scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-scroll"> 
 			<Planets />
-			<h2>Vehicles</h2>
+			</div>
+			<h2 className="text-danger">Vehicles</h2>
+			<div className="row scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-scroll"> 
 			<Vehicles />
+			</div>
 		</div>
 		<p>
 		

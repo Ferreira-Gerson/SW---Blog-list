@@ -18,13 +18,12 @@ export const Planets = () => {
 
     const listPlanet = planet?.results?.map((item, index) => {
         return (
-        <div className="card" key={index} style={{width: "20rem", height: "20rem"}}>
+        <div className="card" key={index} style={{width: "18rem", height: "auto"}}>
             <img src="..." className="card-img-top" alt="..."/>
             <div className="text-start card-body">
                 <h5 className="card-title">Name:{item.name}</h5>
                 <p>Population: {item.population}</p>
                 <p>Terrain: {item.terrain}</p>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button href="#" className="btn btn-primary">more infor</button>
                 <button href="#" className="btn"><i className="fa-regular fa-heart"/></button>
             </div>

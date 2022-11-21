@@ -1,0 +1,21 @@
+.card {
+    margin: 10px;
+}
+
+.outButton {
+    color: black;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 0px 2px #fd6c0b;
+    -moz-box-shadow: inset 0px 0px 0px 2px #fd6c0b;
+    box-shadow: inset 0px 0px 0px 2px #fd6c0b;
+  }
+  
+  .outButton:hover {
+    background: #fd6c0b;
+    border: none;
+  }
+  
+  .outButton:active {
+    background: #fd6c0b !important ;
+    border: none;
+  }
