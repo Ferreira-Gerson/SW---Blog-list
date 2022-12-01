@@ -25,7 +25,7 @@ export const Planets = () => {
                 <p>Population: {item.population}</p>
                 <p>Terrain: {item.terrain}</p>
                 <button href="#" className="btn btn-primary">more infor</button>
-                <button href="#" className="btn"><i className="fa-regular fa-heart"/></button>
+                <button href="#" className="btn outButton float-end"><i className="fa-regular fa-heart"/></button>
             </div>
         </div>
         )

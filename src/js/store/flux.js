@@ -1,6 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			character: [],
+			planet: [],
+			vehicle: [],
 			favorite: [],
 			demo: [
 				{
@@ -17,12 +20,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
+
+			HandleFavorites: (name, url) => {
+				setStore({
+					favorite: [...getStore().favorite, {"Name": name, "Url": url}]
+				});
+				console.log("Saved", getStore().favorite)		
+			},
+
+			DeleteFavorites: (name, url) => {
+				let newFavorite =  getStore().favorite.filter((element) => element.name !== name);
+				setStore({
+					favorites: newFavorite
+				});
+				console.log("deleted", getStore().favorite)
+			},
+
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
 				
 					fetch("https://swapi.dev/api/people").then().then(data => setStore({ "foo": data.bar }))
+					fetch("https://swapi.dev/api/planet").then().then(data => setStore({ "foo": data.bar }))
+					fetch("https://swapi.dev/api/vehicle").then().then(data => setStore({ "foo": data.bar }))
 				
 			},
 			changeColor: (index, color) => {

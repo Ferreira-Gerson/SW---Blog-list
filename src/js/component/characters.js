@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 
  
 
 export const Characters = () => {
-    const [ people, setPeople ] = useState([])
+    const { store, actions } = useContext(Context); 
+    const [ people, setPeople ] = useState([]);
+    const [ isFavorite, setIsFavorite ] = useState(true)
+
+    const favorite = (Name) => {
+        isFavorite === true ? actions.HandleFavorites(Name) : actions.DeleteFavorites(Name)
+      }
    
         
     useEffect(() => {
@@ -30,7 +38,7 @@ export const Characters = () => {
                         <p>Eye Color: {item.eye_color}</p>
                         <p>Hair Color: {item.hair_color}</p>
                         <button href={item.url} className="btn btn-primary">more infor</button>
-                        <a href="#" className="btn outButton float-end "><i className="fa-regular fa-heart toggle " /></a>
+                        <button href="#" className="btn outButton float-end" onClick={() => {setIsFavorite(isFavorite); favorite(store.name, store.url)}}><i className="fa-regular fa-heart toggle " /></button>
                     </div>
                 </div>
                 
@@ -39,8 +47,6 @@ export const Characters = () => {
 
     return <div className="container-fluid row flex-nowrap">{listPeople}</div>
 
-        
+  
 
-
-    
     };

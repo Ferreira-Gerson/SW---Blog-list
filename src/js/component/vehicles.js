@@ -26,7 +26,7 @@ export const Vehicles = () => {
             <p>crew: {item.crew}</p>
             <p>passengers: {item.passengers}</p>
             <button href="#" className="btn btn-primary">more infor</button>
-            <button href="#" className="btn"><i className="fa-regular fa-heart"></i></button>
+            <button href="#" className="btn outButton float-end"><i className="fa-regular fa-heart"></i></button>
         </div>
     </div>
     )})
